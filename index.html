@@ -1,5 +1,7 @@
 <head>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
         body {
             min-height: 100vh;
@@ -11,13 +13,17 @@
             margin: 0;
             background-image: linear-gradient(blue,lightblue);
             font-size: 18px;
-            position: relative;
+
         }
         h1 {
+            font-family: "Allura", cursive;
             font-size: 250px;
             color: #e7e7e7;
             margin: 0;
             letter-spacing: -0.05em;
+            position: absolute;
+            top: 50px;
+            left: 60px;
         }
         .accomplishmentsbtn {
             background-color: white;
@@ -63,14 +69,17 @@
 
         .subtitle {
             margin: 24px;
-            font-size: 24px;
+            font-size: 40px;
             max-width: 900px;
             color: #dcdcdc;
             font-weight: 700;
-            text-align: center;
+            text-align: left;
             white-space: normal;
-            right:0px;
-            top:50px;
+            right: 350px;
+            top:30px;
+            position: fixed;
+            font-family: "Inter", sans-serif;
+            
         }
         .gitopen {
             margin: 24px;
@@ -84,8 +93,8 @@
             gap: 16px;
             flex-wrap: wrap;
             margin-top: 20px;
-            right: 60px;
-            top: 50%;
+            right: 20px;
+            top: 35%;
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
@@ -110,7 +119,16 @@
 <div class ="maincont">
     <h1>Abhijay</h1>
     <p class="subtitle">
-        Creator. Developer. Debater. Public Speaker. AI Enthusiast. Basketball Player. Curious Thinker. Problem Solver. Student Entrepreneur. Lifelong Learner.
+        Creator. <br>
+        Developer. <br>
+        Debater. <br>
+        Public Speaker. <br>
+        AI Enthusiast. <br>
+        Basketball Player. <br>
+        Curious Thinker. <br>
+        Problem Solver. <br>
+        Student Entrepreneur. <br>
+        Lifelong Learner. 
     </p>
 <div class="button-row">
     <button class = "abtmebtn" onclick="abtmebtn()">About Me!</button>
