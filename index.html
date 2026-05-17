@@ -77,7 +77,7 @@
             white-space: normal;
             right: 350px;
             top:30px;
-            position: fixed;
+            position: absolute;
             font-family: "Inter", sans-serif;
             
         }
@@ -100,12 +100,20 @@
             flex-direction: column;
             gap: 20px;
         }
+        .personalimg {
+            width: 300px;
+            position: absolute;
+            left: 80px;
+            top: 40%;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
+        }
         .maincont {
             text-align: center;
             padding: 40px;
             max-width: 980px;
             width: 100%
         }
+
 
     </style>
 </head>
@@ -115,8 +123,9 @@
     
     
     
-    
+   
 <div class ="maincont">
+
     <h1>Abhijay</h1>
     <p class="subtitle">
         Creator. <br>
@@ -135,7 +144,10 @@
     <button class = "accomplishmentsbtn" onclick="accomplishmentsbtn()">Accomplishments</button>
     <button class = "projectsbtn" onclick="projectsbtn()">Projects</button>
 </div>
-</div>  
+     <img class="personalimg" src="images/me.png" alt="Abhijay"   
+</div> 
+
+ 
 <script>
     function abtmebtn() {
         alert("AbtMe Page coming soon")
@@ -152,5 +164,6 @@
         alert("ProjectsPage coming soon")
     }
 </script>
+
 </body>
 
