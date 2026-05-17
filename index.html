@@ -79,6 +79,7 @@
         }
 
 
+
         .gitimg {
             width: 350px;
             position: absolute;
@@ -122,12 +123,58 @@
             transition: 0.2s;
         }
         .maincont {
+            position: relative;
             text-align: center;
             padding: 40px;
             max-width: 980px;
-            width: 100%
-        }
+            width: calc(100vw- 220px);
+            height: 100vh;
+            margin-left: 220px;
+            box-sizing: border-box;
+            
 
+        }
+        #about {
+            display: none;
+        }
+        #about.active {
+            display: flex;
+        }
+        
+        #about {
+            min-height: 100vh;
+            padding-left: 260px;
+            padding-top: 100px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .abt-container {
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(8px);
+            border: 1px solid;
+            border-radius: 16px;
+            box-shadow: rgba(0,0,0,0.2);
+        }
+        #about h2 {
+            font-family: "Inter" sans-serif;
+            font-size: 50px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .about-content p {
+            font-family: "Inter" sans-serif;
+            font-size: 20px;
+            line-height: 1.5;
+            color: #e2e8f0;
+            margin: 0;
+
+        }
 
         
 
@@ -137,17 +184,14 @@
 <div class="sidebar">
     <div class ="logo">AP</div>
 
-    <a href="">Home</a>
-    <a href="">About Me</a>
-    <a href="">Projects</a>
-    <a href="">Accomplishments</a>
+    <a href="#home" class="sidebar-link active">Home</a>
+    <a href="#about" class = "sidebar-link">About Me</a>
+    <a href="#projects" class = "sidebar-link">Projects</a>
+    <a href="#accomplishments" class = "sidebar-link">Accomplishments</a>
 </div>
     
-    
-    
-    
-   
-<div class ="maincont">
+
+<section id="home" class= "maincont active">
 
     <h1>Abhijay</h1>
     <p class="subtitle">
@@ -179,8 +223,32 @@
         </a>
     </div>
 
-</div> 
+</section>
     
+
+<section id="about">
+    <div class="abt-container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>
+                I’m a student passionate about computer science, AI, and building real-world projects that make learning and ideas more accessible.
+I started coding at a young age and have been developing my skills through Python, web development, and hands-on projects that combine creativity with problem-solving.
+I’m a Public Forum debater with competitive tournament experience, and I enjoy breaking down arguments, thinking critically, and improving how I communicate complex ideas.
+I’m also the founder of KidsWhoTeach.org, where I work on peer-to-peer learning initiatives, and I’ve been involved in other community-focused projects like iSpyWithMyLittleEye.org.
+Outside of academics and tech, I’m really interested in basketball, especially game strategy and analysis, and I enjoy solving challenges like Rubik’s cubes and logic puzzles.
+I’m always looking to improve as a builder, speaker, and thinker, with a focus on turning ideas into projects that actually have impact.
+            </p>
+        </div>
+
+    </div>
+</section>
+<script>
+
+</script>
+    
+    
+   
+
 
  
 
