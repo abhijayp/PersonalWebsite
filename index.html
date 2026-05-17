@@ -1,19 +1,23 @@
-<body>
+<head>
+
     <style>
         body {
-            text-align: center;
-            background-color: darkblue;
-            font-size: 100px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 40px;
+            margin: 0;
+            background-color: black;
+            font-size: 18px;
         }
         h1 {
-            color:black;
-            font-style: italic;
-            position: 50,20;
-            
+            font-size: 250px;
+            color: #e7e7e7;
+            margin: 0;
+            letter-spacing: -0.05em;
         }
-    </style>
-<head>
-    <style>
         .accomplishmentsbtn {
             background-color: aqua;
             color: black;
@@ -23,7 +27,9 @@
             border-radius: 12px;
             cursor: pointer;
             width: 200px;
-            height:60px
+            height:60px;
+
+            
         }
         .abtmebtn {
             background-color: aqua;
@@ -48,37 +54,64 @@
             height:60px;
         }
 
-    
+        .subtitle {
+            margin: 24px;
+            font-size: 24px;
+            line-height: 1.7;
+            max-width: 900px;
+            color: #dcdcdc;
+            font-weight: 700;
+            text-align: center;
+            white-space: normal;
+        }
+        .button-row {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .maincont {
+            text-align: center;
+            padding: 40px;
+            max-width: 980px;
+            width: 100%
+        }
     </style>
 </head>
-</body>
+<body>
 
     
     
     
     
     
-    
-<h1>
-        Abhijay Potluri
-</h1>
-<button class = "abtmebtn" onclick="abtmebtn()">About Me!</button>
+<div class ="maincont">
+    <h1>Abhijay</h1>
+    <p class="subtitle">
+        Creator. Developer. Debater. Public Speaker. AI Enthusiast. Basketball Player. Curious Thinker. Problem Solver. Student Entrepreneur. Lifelong Learner.
+    </p>
 
+    <div class="button-row">
+        <button class = "abtmebtn" onclick="abtmebtn()">About Me!</button>
+        <button class = "accomplishmentsbtn" onclick="accomplishmentsbtn()">Accomplishments</button>
+        <button class = "projectsbtn" onclick="projectsbtn()">Projects</button>
+    </div>
+</div>  
 <script>
     function abtmebtn() {
         alert("AbtMe Page coming soon")
     }
 </script>
-<button class = "accomplishmentsbtn" onclick="accomplishmentsbtn()">Accomplishments</button>
+
 <script>
     function accomplishmentsbtn() {
         alert("AccomplishmentPage coming soon")
     }
 </script>
-<button class = "accomplishmentsbtn" onclick="projectsbtn()">Projects</button>
 <script>
     function projectsbtn() {
         alert("ProjectsPage coming soon")
     }
 </script>
-
+</body>
