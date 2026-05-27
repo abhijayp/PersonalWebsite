@@ -16,6 +16,7 @@
             font-size: 18px;
 
 
+
         }
         h1 {
             font-family: "Allura", cursive;
@@ -26,6 +27,10 @@
             position: absolute;
             top: 0%;
             left: 300 x;
+
+        }
+        h1:hover {
+            text-decoration: underline;
         }
         
         .subtitle {
@@ -49,11 +54,13 @@
         }
 
         .personalimg {
-            width: 300px;
-            position: absolute;
-            right: 0px;
-            top: 0%;
-            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
+            float: left;
+            width: 500px;
+            height: 640px;
+            position: static;
+            margin: 0 30px 20px 0;
+            border-radius: 12px;
+
         }
         .social-stack {
             position: absolute;
@@ -136,6 +143,15 @@
         }
         #about {
             display: none;
+            min-height: 800px;
+            padding-left: 260px;
+            padding-right: 40px;
+            padding-top: 100px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            box-sizing: border-box;
+
         }
         #about.active {
             display: flex;
@@ -143,22 +159,13 @@
         
         #about {
             min-height: 100vh;
-            padding-left: 260px;
-            padding-top: 100px;
-            box-sizing: border-box;
+            scroll-behavior: smooth;
             display: flex;
             justify-content: flex-start;
             align-items: center;
         }
-        .abt-container {
-            max-width: 800px;
-            padding: 40px;
-            background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(8px);
-            border: 1px solid;
-            border-radius: 16px;
-            box-shadow: rgba(0,0,0,0.2);
-        }
+
+
         #about h2 {
             font-family: "Inter" sans-serif;
             font-size: 50px;
@@ -167,15 +174,61 @@
             margin-top: 0;
             margin-bottom: 20px;
         }
-        .about-content p {
+        .abt-content p {
             font-family: "Inter" sans-serif;
-            font-size: 20px;
+            font-size: 30px;
             line-height: 1.5;
             color: #e2e8f0;
             margin: 0;
 
-        }
 
+        }
+        .abt-container {
+            width: 1000px;
+            padding: 40px;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        #projects {
+            min-height: 100vh;
+            padding: 80px;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+
+        }
+        .projects-container {
+            font-family: Inter, sans-serif;
+            color: white;
+            font-size: 55px;
+            margin-bottom: 50px;
+
+        }
+        .projects-grid {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(autofit, minmax(350px,1fr));
+            
+        }
+        .projects-card {
+            background:rgba(225,225,225,0.7);
+            border: 1px solid black;
+            backdrop-filter: blur(12px);
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.5s ease;
+        }
+        .projects-card:hover {
+            transform: translateY(-10px);
+            background: rgba(225,225,225,0.12);
+
+        }
+        .projects-card h3 {
+            color: white;
+            font-family: Inter, sans-serif;
+            margin-bottom: 15px;
+            line-height: 2;
+
+        }
         
 
     </style>
@@ -207,7 +260,6 @@
         Lifelong Learner. 
     </p>
 
-    <img class="personalimg" src="images/me.png" >  
     <div class = "social-stack">
         <a href="https://www.youtube.com/channel/UCxjfrREJIDCyDrLG3adfXZQ" target="_blank" class="social-link">
             <img src="images/yt2.png">
@@ -227,19 +279,54 @@
     
 
 <section id="about">
+
     <div class="abt-container">
         <h2>About Me</h2>
-        <div class="about-content">
+        <div class="abt-content">
+            <img class="personalimg" src="images/me.png" >  
             <p>
-                I’m a student passionate about computer science, AI, and building real-world projects that make learning and ideas more accessible.
-I started coding at a young age and have been developing my skills through Python, web development, and hands-on projects that combine creativity with problem-solving.
-I’m a Public Forum debater with competitive tournament experience, and I enjoy breaking down arguments, thinking critically, and improving how I communicate complex ideas.
-I’m also the founder of KidsWhoTeach.org, where I work on peer-to-peer learning initiatives, and I’ve been involved in other community-focused projects like iSpyWithMyLittleEye.org.
-Outside of academics and tech, I’m really interested in basketball, especially game strategy and analysis, and I enjoy solving challenges like Rubik’s cubes and logic puzzles.
-I’m always looking to improve as a builder, speaker, and thinker, with a focus on turning ideas into projects that actually have impact.
+            I’m a student passionate about computer science, AI, and building real-world projects that make learning and ideas more accessible.
+            I started coding at a young age and have been developing my skills through Python, web development, and hands-on projects that combine creativity with problem-solving.
+            I’m a Public Forum debater with competitive tournament experience, and I enjoy breaking down arguments, thinking critically, and improving how I communicate complex ideas.
+            I’m also the founder of KidsWhoTeach.org, where I work on peer-to-peer learning initiatives, and I’ve been involved in other community-focused projects like iSpyWithMyLittleEye.org.
+            Outside of academics and tech, I’m really interested in basketball, especially game strategy and analysis, and I enjoy solving challenges like Rubik’s cubes and logic puzzles.
+            I’m always looking to improve as a builder, speaker, and thinker, with a focus on turning ideas into projects that actually have impact.
             </p>
         </div>
 
+    
+    </div>
+</section>
+<section id="projects">
+    <div class="projects-container">
+        <h2>
+            Projects
+        </h2>
+        <div class ="projects-grid">
+            <div class ="projects-card">
+                <h3>
+                    KidsWhoTeach
+                </h3>
+            </div>
+            <div class="projects-card">
+                <h3>
+                    iSpyWithMyLittleEye
+                </h3>
+            </div>
+            <div class="projects-card">
+                <h3>
+                    Spotlight With Abhijay
+                </h3>
+            </div>
+            <div class="projects-card">
+                <h3>
+                    ReCovAI
+                </h3>
+
+
+            </div>
+
+        </div>
     </div>
 </section>
 <script>
